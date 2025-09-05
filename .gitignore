@@ -48,7 +48,3 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
-kanjijlptaddon/__pycache__/util.cpython-39.pyc
-kanjijlptaddon/__pycache__/test_util.cpython-39.pyc
-kanjijlptaddon/__pycache__/test_util.cpython-39.pyc
-kanjijlptaddon/__pycache__/util.cpython-39.pyc
