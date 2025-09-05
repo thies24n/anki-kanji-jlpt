@@ -15,6 +15,23 @@ def get_kanji_data(kanji: str):
     # Return default value
     return {"jlpt": 5, "grade": 1}
 
+def kanji_to_grade(kanji: str) -> int:
+    """
+
+    :param kanji:
+    :return:
+    """
+
+    # Edge case: empty string
+    if kanji == "":
+        return 1
+
+    # Get grade of each kanji in string
+    grades = [get_kanji_data(k)['grade'] for k in kanji]
+
+    # The hardest kanji determines the result of this function
+    return max(grades)
+
 def kanji_to_jlpt(kanji: str) -> int:
     """
 
