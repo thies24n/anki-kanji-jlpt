@@ -22,14 +22,18 @@ def kanji_to_jlpt(kanji: str) -> int:
     :return:
     """
 
+    # Edge case: empty string
+    if kanji == "":
+        return 5
+
     # Get jlpt level of each kanji in string
-    jlpt_levels = [get_kanji_data(k) for k in kanji_data]
-    
+    jlpt_levels = [get_kanji_data(k)['jlpt'] for k in kanji]
+
     # The hardest kanji determines the result of this function
     return min(jlpt_levels)
 
 def reload_kanji_data():
     global kanji_data
-    with open("./kanji_data.json", "r") as f:
+    with open("kanjijlptaddon/kanji_data.json", "r") as f:
         kanji_data = json.load(f)
         f.close()

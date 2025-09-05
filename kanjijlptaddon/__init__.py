@@ -1,3 +1,4 @@
+"""
 from anki import hooks
 
 # import the main window object (mw) from aqt
@@ -23,3 +24,4 @@ action = QAction("test", mw)
 qconnect(action.triggered, testFunction)
 # and add it to the tools menu
 mw.form.menuTools.addAction(action)
+"""
